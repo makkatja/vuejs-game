@@ -1,0 +1,71 @@
+.healthbar{
+    width: 200px;
+    height: 40px;
+    background-color: forestgreen;
+    color: #ffffff;
+    text-align: center;
+    line-height: 40px;
+}
+.healthbar-holder{
+    width: 600px;
+    border: 1px solid rgba(102, 102, 102, 0.6);
+    margin-bottom: 10px;
+}
+.log ul{
+    list-style: none;
+}
+
+#start-game{
+    background-color: cornflowerblue;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    color: #ffffff;
+    padding: 10px;
+}
+.attack{
+    background-color: coral;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    color: #ffffff;
+    padding: 10px;
+}
+.special-attack{
+    background-color: crimson;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    color: #ffffff;
+    padding: 10px;
+}
+.heal{
+    background-color: chartreuse;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    color: #ffffff;
+    padding: 10px;
+}
+.give-up{
+    background-color: yellowgreen;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    color: #ffffff;
+    padding: 10px;
+}
+.log ul{
+    margin: 0;
+    padding: 0;
+}
+.log ul .player-turn{
+    color: #fff;
+    background-color: #ff6669;
+    padding: 5px;
+}
+.log ul .monster-turn{
+    color: #ffffff;
+    background-color: #518cff;
+    padding: 5px;
+}

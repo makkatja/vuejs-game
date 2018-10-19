@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.js complete</title>
+    <link rel="stylesheet" href="css/app.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <section class="row">
+        <div class="small-6">
+            <span class="text">you</span>
+            <div class="healthbar-holder">
+                <div class="healthbar" :style="{width: playerHealth + '%'}"> {{ playerHealth }} %</div>
+            </div>
+        </div>
+        <div class="small-6">
+            <span class="text">monster</span>
+            <div class="healthbar-holder">
+                <div class="healthbar" :style="{width: monsterHealth + '%'}">{{ monsterHealth }} %</div>
+            </div>
+        </div>
+    </section>
+    <div class="row controls">
+        <div class="control-holder" v-if="!gameIsRunning">
+            <button id="start-game" @click="startGame">start new game</button>
+        </div>
+        <div class="colntol-holder" v-else>
+            <button class="attack" @click="attack">attack</button>
+            <button class="special-attack" @click="specialAttack">special-attack</button>
+            <button class="heal" @click="heal">heal</button>
+            <button class="give-up" @click="giveUp">give up</button>
+        </div>
+    </div>
+    <div class="row log" v-if="turns.length > 0">
+        <hr>
+        <ul>
+            <li v-for="turn in turns"
+                :class="{'player-turn' : turn.isPlayer, 'monster-turn' : !turn.isPlayer}">
+                <span> {{ turn.text }} </span>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+<script src="app.js"></script>
+</html>
